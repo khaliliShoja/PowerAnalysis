@@ -1,4 +1,5 @@
 
+
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
@@ -16,7 +17,7 @@ import datetime
 # In[124]:
 
 
-files = os.listdir("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power") 
+files = os.listdir("..\\Data\\Power")
 
 
 # In[125]:
@@ -28,10 +29,10 @@ files_2010 = [x for x in files if '2010' in x]
 # In[126]:
 
 
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2010[0])
+path =  os.path.join ('..\\Data\\Power' , files_2010[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2010)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2010[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2010[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -131,7 +132,7 @@ df2.head()
 
 
 df2 ['Year'] =  df2 ['Date'].dt.year
-df3 = df2 [(df2['Year'] != 2009) & (df2['Year'] != 2011)] 
+df3 = df2 [(df2['Year'] != 2009) & (df2['Year'] != 2011)]
 
 df3 = df3.reset_index()
 
@@ -154,7 +155,7 @@ df_2010_power = df3.copy()
 # In[153]:
 
 
-df_2010_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2010.csv")
+df_2010_power.to_csv("..\\Data\\Power\\fixed\\df_2010.csv")
 
 
 # In[ ]:
@@ -167,10 +168,10 @@ df_2010_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 
 
 files_2011 = [x for x in files if '2011' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2011[0])
+path =  os.path.join ('..\\Data\\Power' , files_2011[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2011)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2011[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2011[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -209,7 +210,7 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2010) & (df2['Year'] != 2012)] 
+df3 = df2 [(df2['Year'] != 2010) & (df2['Year'] != 2012)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
@@ -218,8 +219,8 @@ df3 = df3.drop(['index'], axis=1)
 
 
 #change
-df_2011_power = df3.copy()   
-df_2011_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2011.csv")        
+df_2011_power = df3.copy()
+df_2011_power.to_csv("..\\Data\\Power\\fixed\\df_2011.csv")
 
 
 
@@ -231,10 +232,10 @@ df_2011_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 
 ##2012
 files_2012 = [x for x in files if '2012' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2012[0])
+path =  os.path.join ('..\\Data\\Power' , files_2012[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2012)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2012[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2012[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -261,13 +262,13 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2011) & (df2['Year'] != 2013)] 
+df3 = df2 [(df2['Year'] != 2011) & (df2['Year'] != 2013)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
 #change
-df_2012_power = df3.copy()   
-df_2012_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2012.csv")     
+df_2012_power = df3.copy()
+df_2012_power.to_csv("..\\Data\\Power\\fixed\\df_2012.csv")
 
 
 # In[174]:
@@ -277,10 +278,10 @@ df_2012_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 
 
 files_2013 = [x for x in files if '2013' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2013[0])
+path =  os.path.join ('..\\Data\\Power' , files_2013[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2013)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2013[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2013[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -307,13 +308,13 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2012) & (df2['Year'] != 2014)] 
+df3 = df2 [(df2['Year'] != 2012) & (df2['Year'] != 2014)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
 #change
-df_2013_power = df3.copy()   
-df_2013_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2013.csv")     
+df_2013_power = df3.copy()
+df_2013_power.to_csv("..\\Data\\Power\\fixed\\df_2013.csv")
 
 
 # In[175]:
@@ -323,10 +324,10 @@ df_2013_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 
 
 files_2014 = [x for x in files if '2014' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2014[0])
+path =  os.path.join ('..\\Data\\Power' , files_2014[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2014)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2014[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2014[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -353,13 +354,13 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2013) & (df2['Year'] != 2015)] 
+df3 = df2 [(df2['Year'] != 2013) & (df2['Year'] != 2015)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
 #change
-df_2014_power = df3.copy()   
-df_2014_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2014.csv")     
+df_2014_power = df3.copy()
+df_2014_power.to_csv("..\\Data\\Power\\fixed\\df_2014.csv")
 
 
 # In[176]:
@@ -368,10 +369,10 @@ df_2014_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 #### 2015
 
 files_2015 = [x for x in files if '2015' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2015[0])
+path =  os.path.join ('..\\Data\\Power' , files_2015[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2015)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2015[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2015[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -398,13 +399,13 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2014) & (df2['Year'] != 2016)] 
+df3 = df2 [(df2['Year'] != 2014) & (df2['Year'] != 2016)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
 #change
-df_2015_power = df3.copy()   
-df_2015_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2015.csv")     
+df_2015_power = df3.copy()
+df_2015_power.to_csv("..\\Data\\Power\\fixed\\df_2015.csv")
 
 
 # In[177]:
@@ -413,10 +414,10 @@ df_2015_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 #### 2016
 
 files_2016 = [x for x in files if '2016' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2016[0])
+path =  os.path.join ('..\\Data\\Power' , files_2016[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2016)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2016[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2016[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -443,13 +444,13 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2015) & (df2['Year'] != 2017)] 
+df3 = df2 [(df2['Year'] != 2015) & (df2['Year'] != 2017)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
 #change
-df_2016_power = df3.copy()   
-df_2016_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2016.csv")    
+df_2016_power = df3.copy()
+df_2016_power.to_csv("..\\Data\\Power\\fixed\\df_2016.csv")
 
 
 # In[178]:
@@ -458,10 +459,10 @@ df_2016_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixe
 #### 2017
 
 files_2017 = [x for x in files if '2017' in x]
-path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2017[0])
+path =  os.path.join ('..\\Data\\Power' , files_2017[0])
 df = pd.read_csv(path)
 for i in range(1, len(files_2017)):
-    path =  os.path.join ('F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power' , files_2017[i])
+    path =  os.path.join ('..\\Data\\Power' , files_2017[i])
     df1 = pd.read_csv(path)
     df = df.append(df1)
 
@@ -488,11 +489,10 @@ df2 = df2.drop(['Date_'], axis=1)
 
 df2 ['Year'] =  df2 ['Date'].dt.year
 #change
-df3 = df2 [(df2['Year'] != 2016) & (df2['Year'] != 2018)] 
+df3 = df2 [(df2['Year'] != 2016) & (df2['Year'] != 2018)]
 df3 = df3.reset_index()
 df3 = df3.drop(['index'], axis=1)
 
 #change
-df_2017_power = df3.copy()   
-df_2017_power.to_csv("F:\\Project_incubator\\ETS\\Temp\\Codes\\Data\\Power\\fixed\\df_2017.csv")    
-
+df_2017_power = df3.copy()
+df_2017_power.to_csv("..\\Data\\Power\\fixed\\df_2017.csv")
